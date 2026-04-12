@@ -1,5 +1,6 @@
 import Ayushi from "./ayushi"
 import Variables from "./practice/Variable"
+import Condition from "./practice/Condition"
 
 function App() {
   return (
@@ -7,7 +8,9 @@ function App() {
       {/* <Ayushi/>
       <h1>This is my first react</h1> */}
 
-      <Variables/>
+      {/* <Variables/> */}
+
+      <Condition/>
     </>
   );
 }
