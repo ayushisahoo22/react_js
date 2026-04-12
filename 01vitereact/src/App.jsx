@@ -1,6 +1,7 @@
 import Ayushi from "./ayushi"
 import Variables from "./practice/Variable"
 import Condition from "./practice/Condition"
+import Attribute from "./practice/Attributes"
 
 function App() {
   return (
@@ -10,7 +11,9 @@ function App() {
 
       {/* <Variables/> */}
 
-      <Condition/>
+      {/* <Condition/> */}
+
+      <Attribute/>
     </>
   );
 }
