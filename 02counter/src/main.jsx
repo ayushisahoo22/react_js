@@ -2,6 +2,8 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 // import Car from './Props.jsx'
 import Car from './PropsObject.jsx'
+import FavoriteColor from './Hooks/Hook_color.jsx'
+import CounterApp from './Hooks/Hook_counter.jsx'
 
 //    Object
 // const carInfo={
@@ -30,5 +32,10 @@ createRoot(document.getElementById('root')).render(
   // <Car info={carInfo}/>
 
   //nested
-  <Garage/>
+  // <Garage/>
+
+  // <FavoriteColor/>
+
+  <CounterApp/>
+
 )
