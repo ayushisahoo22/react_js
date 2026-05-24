@@ -5,6 +5,7 @@ import Car from './PropsObject.jsx'
 import FavoriteColor from './Hooks/Hook_color.jsx'
 import CounterApp from './Hooks/Hook_counter.jsx'
 import Timer from './Hooks/useEffect.jsx'
+import Component1 from './Hooks/useContext.jsx'
 
 //    Object
 // const carInfo={
@@ -39,5 +40,7 @@ createRoot(document.getElementById('root')).render(
 
   // <CounterApp/>
 
-  <Timer/>
+  // <Timer/>
+
+  <Component1/>
 )
