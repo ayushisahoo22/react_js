@@ -7,6 +7,7 @@ import CounterApp from './Hooks/Hook_counter.jsx'
 import Timer from './Hooks/useEffect.jsx'
 import Component1 from './Hooks/useContext.jsx'
 import UseRef from './Hooks/useRef.jsx'
+import Reducer from './Hooks/useReducer.jsx'
 
 //    Object
 // const carInfo={
@@ -45,5 +46,7 @@ createRoot(document.getElementById('root')).render(
 
   // <Component1/>
 
-  <UseRef/>
+  // <UseRef/>
+
+  <Reducer/>
 )
