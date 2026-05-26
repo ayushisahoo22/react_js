@@ -6,6 +6,7 @@ import FavoriteColor from './Hooks/Hook_color.jsx'
 import CounterApp from './Hooks/Hook_counter.jsx'
 import Timer from './Hooks/useEffect.jsx'
 import Component1 from './Hooks/useContext.jsx'
+import UseRef from './Hooks/useRef.jsx'
 
 //    Object
 // const carInfo={
@@ -42,5 +43,7 @@ createRoot(document.getElementById('root')).render(
 
   // <Timer/>
 
-  <Component1/>
+  // <Component1/>
+
+  <UseRef/>
 )
