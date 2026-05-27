@@ -8,6 +8,7 @@ import Timer from './Hooks/useEffect.jsx'
 import Component1 from './Hooks/useContext.jsx'
 import UseRef from './Hooks/useRef.jsx'
 import Reducer from './Hooks/useReducer.jsx'
+import Callback from './Hooks/useCallback.jsx'
 
 //    Object
 // const carInfo={
@@ -48,5 +49,7 @@ createRoot(document.getElementById('root')).render(
 
   // <UseRef/>
 
-  <Reducer/>
+  // <Reducer/>
+
+  <Callback/>
 )
