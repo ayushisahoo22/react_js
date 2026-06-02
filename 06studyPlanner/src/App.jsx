@@ -1,10 +1,12 @@
 import './App.css'
 import SideBar from './Components/SideBar'
+import MainContent from './Components/MainContent'
 
 function App() {
   return (
-    <div className='main'>
+    <div style={{display:"flex"}}>
       <SideBar/>
+      <MainContent/>
     </div>
   )
 }
