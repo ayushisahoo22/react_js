@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding:0
+}
+
+.assignmentHead{
+    display: flex;
+    flex-direction: row;
+    gap:60%;
+    margin-left: 15px;
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.assignmentCard{
+    margin-top: 5px;
+    width: 130px;
+    height: 90px;
+    border: 1px solid #e5e5e5;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}

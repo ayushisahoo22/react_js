@@ -9,7 +9,7 @@ function SideBar(){
                     display:"flex",
                     justifyContent:"center", 
                     marginTop:"13px"}}
-                    > 📚 Study Planner</h2>
+                    > 📖 Study Planner</h2>
                     <div className="sidebarMenu">
                         <Link to="/" className="linkStyle">Dashboard</Link>
                         <Link to="/subjects" className="linkStyle">Subjects</Link>

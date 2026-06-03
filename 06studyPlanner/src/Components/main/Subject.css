@@ -1,0 +1,25 @@
+*{
+    margin:0;
+    padding:0
+}
+.subjectHeader{
+    display: flex;
+    flex-direction: row;
+    gap:66%;
+    margin-left: 15px;
+}
+.subjectCards{
+    display:flex;
+    flex-direction: row;
+    gap:10px;
+}
+
+.subjectCard{
+    margin-top: 5px;
+    width: 130px;
+    height: 90px;
+    border-radius:18px;
+    padding:20px;
+    background:#c8d4ec;
+    box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
