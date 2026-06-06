@@ -1,43 +1,75 @@
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import "./RightPanel.css"
-function RightPanel(){
-     return(
+import "./RightPanel.css";
+import { tasks } from "../Data/task";
+import { useNavigate } from "react-router-dom";
+
+function RightPanel() {
+    const navigate = useNavigate();
+
+    const streakData = {
+        currentStreak: 12,
+        bestStreak: 18
+    };
+
+    return (
         <div className="rightPanel">
+
             <div className="calendarCard">
                 <Calendar />
             </div>
+
             <div className="taskCard">
-                <div className="taskHead" style={{display:"flex",alignItems:"row",gap:"50px"}}>
+
+                <div className="taskHead">
                     <h2>Today's Tasks</h2>
-                    <button style={{
-                        backgroundColor:"Black",
-                        border:"none",
-                        padding:"5px",
-                        color:"white",
-                        borderRadius:"5px"
-                    }}>Add</button>
+
+                    <button
+                        className="viewBtn"
+                        onClick={() => navigate("/Schedule/Schedule")}
+                    >
+                        View All
+                    </button>
                 </div>
-                <div className="taskItem">
-                    <input type="checkbox"/>
-                    <span>React Revision</span>
-                </div>
-                <div className="taskItem">
-                    <input type="checkbox"/>
-                    <span>DSA Practice</span>
-                </div>
-                <div className="taskItem">
-                    <input type="checkbox"/>
-                    <span>DBMS Notes</span>
-                </div>
+
+                {tasks.slice(0, 3).map((task) => (
+                    <div className="taskItem" key={task.id}>
+
+                        <input
+                            type="checkbox"
+                            checked={task.completed}
+                            readOnly
+                        />
+
+                        <span>{task.title}</span>
+
+                    </div>
+                ))}
+
             </div>
+
             <div className="streakCard">
-                <div style={{fontSize:"50px"}}>🔥</div>
-                    <h1>12 Days</h1>
-                    <p>Best Streak: 18 Days</p>
-                    <p>Keep it up!</p>
+
+                <div className="fireEmoji">
+                    🔥
                 </div>
+
+                <h1>
+                    {streakData.currentStreak} Days
+                </h1>
+
+                <p>
+                    Best Streak: {streakData.bestStreak} Days
+                </p>
+
+                <p className="streakText">
+                    Keep it up!
+                </p>
+
+            </div>
+
         </div>
-    )
+    );
 }
-export default RightPanel
+
+export default RightPanel;

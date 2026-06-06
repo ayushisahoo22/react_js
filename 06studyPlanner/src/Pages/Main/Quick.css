@@ -1,27 +1,46 @@
 *{
     margin:0;
-    padding:0
+    padding:0;
+    box-sizing:border-box;
+}
+
+.quickActions{
+    margin-top:20px;
+}
+
+.quickHeader{
+    margin-bottom:15px;
+}
+
+.quickHeader h3{
+    font-size:20px;
 }
 
 .actionCards{
     display:flex;
-    gap:10px;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
 .actionCard{
-    margin-top: 5px;;
-    width:168px;
-    height:70px;
-    border:1px solid #abc9dc9e;
-    border-radius:15px;
+    width:140px;
+    height:80px;
+    background:white;
+    border:1px solid #dce9f1;
+    border-radius:16px;
     display:flex;
     justify-content:center;
     align-items:center;
+    font-weight:500;
     cursor:pointer;
-    transition:0.3s;
+    transition:all 0.3s ease;
+    box-shadow:
+    0 2px 8px rgba(0,0,0,0.05);
 }
 
 .actionCard:hover{
-    transform:translateY(-3px);
-    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    transform:translateY(-4px);
+    box-shadow:
+    0 6px 15px rgba(0,0,0,0.12);
+    border-color:#4f7cff;
 }

@@ -1,24 +1,32 @@
-import {BrowserRouter, Link} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./SideBar.css";
-import sidebar from "../Assets/sidebar.png"
-function SideBar(){
-    return(
-        <nav className="sidebar">
-            <h2 style={{
-                display:"flex",
-                justifyContent:"center", 
-                marginTop:"13px"}}
-                > 📖 Study Planner</h2>
-                <div className="sidebarMenu">
-                    <Link to="/" className="linkStyle">Dashboard</Link>
-                    <Link to="/Subject/sub" className="linkStyle">Subjects</Link>
-                    <Link to="/schedule" className="linkStyle">Schedule</Link>
-                    <Link to="/progress" className="linkStyle">Progress</Link>
-                    <Link to="/notes" className="linkStyle">Notes</Link>
-                    <Link to="/goals" className="linkStyle">Goals</Link>
-                </div>
-        </nav>
-    )
-    
+function SideBar() {
+  const menuItems = [
+    { name: "Dashboard", path: "/" },
+    { name: "Subjects", path: "/Subject/Sub" },
+    { name: "Schedule", path: "/Schedule/Schedule" },
+    { name: "Progress", path: "/Progress/Progress" },
+    { name: "Notes", path: "/Note/Notes" }
+  ];
+  return (
+    <nav className="sidebar">
+      <h2 className="logo">
+        📖 Study Planner
+      </h2>
+      <div className="sidebarMenu">
+        {menuItems.map((item) => (
+          <NavLink
+            key={item.name}
+            to={item.path}
+            className={({ isActive }) =>
+              isActive ? "linkStyle activeLink" : "linkStyle"
+            }
+          >
+            {item.name}
+          </NavLink>
+        ))}
+      </div>
+    </nav>
+  );
 }
 export default SideBar;
